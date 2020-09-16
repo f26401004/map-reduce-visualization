@@ -1,28 +1,26 @@
-<template>
-  <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
-  </div>
+<template lang="pug">
+  v-app
+    v-app-bar(
+      app
+      color="indigo"
+      dark)
+      div(class="d-flex align-center")
+        h5(class="text-h5 text-left") Map/Reduce Algorithms Visualization
+    v-main
+      main-page
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MainPage from '@/components/MainPage.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
-  }
+    MainPage
+  },
+
+  data: () => ({
+    //
+  })
 }
 </script>
-
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
